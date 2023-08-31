@@ -1,3 +1,4 @@
+import os
 from flask import Flask, request, jsonify
 import tensorflow as tf
 from PIL import Image
