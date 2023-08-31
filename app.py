@@ -68,6 +68,10 @@ def predict():
 def internal_server_error(e):
     return jsonify({'error': 'Internal server error'}), 500
 
+# Uncomment this code for local development
+# if __name__ == '__main__':
+#     app.run(debug=True)
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+
